@@ -7,38 +7,37 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="407dp"
-            android:layout_height="675dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/recyclerView"
             app:layoutManager="LinearLayoutManager"
-    />
+            app:layout_constraintBottom_toTopOf="@+id/minusButton" app:layout_constraintVertical_bias="0.0"/>
     <Button
             android:text="ROLL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/roll"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
             android:text="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/diceNum"
             app:layout_constraintEnd_toStartOf="@+id/plusButton"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/minusButton"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/minusButton" app:layout_constraintTop_toTopOf="@+id/minusButton"/>
     <Button
             android:text="+"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/plusButton"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"/>
+    />
     <Button
             android:text="-"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/minusButton"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
             app:layout_constraintStart_toEndOf="@+id/roll" app:layout_constraintBottom_toBottomOf="parent"
     />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,11 +10,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/total"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+    />
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
+            app:layout_constrainedWidth="true"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/dices"
+            app:layout_constraintWidth_min="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/dices" app:layout_constraintStart_toEndOf="@+id/total"/>
+            app:layout_constraintStart_toEndOf="@+id/total">
+    </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
